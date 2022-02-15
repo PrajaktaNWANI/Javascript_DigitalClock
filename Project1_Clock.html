@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Digital Clock Using JavaScript </title>
+    <style>
+       
+        #digital-clock {
+            background-color: aquamarine;
+            width: 35%;
+            margin: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 64px;
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body style="background-color: antiquewhite;">
+    <h1 style="text-align: center;">Digital Clock Using JavaScript</h1>
+    <div id="digital-clock"> </div>
+
+
+    <script>
+        //Clock 
+        (function () {
+            setInterval(() => {
+                var d = new Date().toLocaleTimeString();
+                document.getElementById("digital-clock").innerHTML = d;
+
+            }, 1000)
+        })();
+    </script>
+</body>
+
+</html>
